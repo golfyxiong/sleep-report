@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semacare Sleep Report</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div id="file-input-wrapper">
+            <input type="file" id="file-input" />
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div class="title">
+            
+                <img class="logo" src="./logo.png">
+                <p class="text"><h2>&#12288旭宏医疗<br/>睡眠监测报告</h2></p>
+
+
+        </div>
+
+        <div>
+            <h3>基本信息</h3>
+            <hr>
+            <table id="baseinfor">
+                <tr>
+                    <td>姓名：</td><td id="idname">陈小马</td><td>性别：</td><td id="idgender">男</td><td>年龄：</td><td id="idage">27岁</td>
+                </tr>
+                <tr>
+                    <td>身高：</td><td id="idheight">173cm</td><td>体重：</td><td id="idweight">55kg</td><td>BMI：</td><td id="idbmi">24</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>ECG采集信息</h3>
+            <hr>
+            <table>
+                <tr><td>数据记录收集时间：</td><td id="sleep_time">9小时00分</td><td>&#12288&#12288</td><td id="sleep_time_range"></td></tr>
+            </table>
+        </div>
+
+
+        <div>
+            <h3>睡眠分期</h3>
+            <hr>
+            <div>
+                <table border="1" cellspacing="0">
+                    <tr><th>睡眠阶段</th><th>时间</th><th>占睡眠时间（%）</th></tr>
+                    <tr><td>清醒时间</td><td id="wake_sleep_time"></td><td id="wake_sleep_time_scale"></td></tr>
+                    <tr><td>REM睡眠</td><td id="rem_sleep_time"></td><td id="rem_sleep_time_scale"></td></tr>
+                    <tr><td>浅睡眠</td><td id="light_sleep_time"></td><td id="light_sleep_time_scale"></td></tr>
+                    <tr><td>深度睡眠</td><td id="deep_sleep_time"></td><td id="deep_sleep_time_scale"></td></tr>
+                    <tr><td>其他睡眠</td><td id="other_sleep_time"></td><td id="other_sleep_time_scale"></td></tr>
+                </table>
+            </div>
+            <p>&nbsp;</p>
+            <div id="chart-container"></div>
+    
+
+
+            
+        </div>
+        <p>&nbsp;</p><p>&nbsp;</p>
+        <div>
+            <h3>心率统计</h3>
+            <hr>
+            <div>
+                <table border="1"  cellspacing="0">
+                    <tr><th>平均心率</th><td id="mean_hr"></td></tr>
+                    <tr><th>最高心率</th><td id="max_hr"></td></tr>
+                    <tr><th>最低心率</th><td id="min_hr"></td></tr>
+                </table>
+            </div>
+            <p>HR</p>
+            <div id="chart-container3"></div>
+            
+        </div>
+
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./echarts.js"></script>
+    <script src="./index.js"></script>
+    
+
+</body>
+
+</html>
